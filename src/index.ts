@@ -1,14 +1,9 @@
 import "./styles.css";
-import { Log, Log2, Log3, Logger, UseHtmlTemplate } from "./decorators";
+import { Log, Log2, Log3, Logger, Required } from "./decorators";
 
 @Logger("*******")
-@UseHtmlTemplate("<h1>LOG</h1>", "app")
-@UseHtmlTemplate("<h4>hhddddd</h4>", "log1")
-
-
-
-
 class Person {
+  @Required
   name: string;
   age: number;
   constructor(n: string, a?: number) {
@@ -16,6 +11,8 @@ class Person {
     this.age = a ? (this.age = a) : 0;
   }
 }
+const p = new Person('Heinz')
+
 class Product {
   private _price: number;
   @Log

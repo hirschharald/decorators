@@ -191,15 +191,48 @@ module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
 },{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/decorators.ts":[function(require,module,exports) {
 "use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.UseHtmlTemplate = exports.Log = exports.Log3 = exports.Log2 = exports.Logger = void 0;
 /*
   decorators
 
 */
+
+var __assign = this && this.__assign || function () {
+  __assign = Object.assign || function (t) {
+    for (var s, i = 1, n = arguments.length; i < n; i++) {
+      s = arguments[i];
+
+      for (var p in s) {
+        if (Object.prototype.hasOwnProperty.call(s, p)) t[p] = s[p];
+      }
+    }
+
+    return t;
+  };
+
+  return __assign.apply(this, arguments);
+};
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.UseHtmlTemplate = exports.Log = exports.Log3 = exports.Log2 = exports.Logger = exports.NotEmpty = exports.Required = void 0;
+var registeredValidators = {};
+
+function Required(target, propName) {
+  var _a;
+
+  registeredValidators[target.constructor.name] = __assign(__assign({}, registeredValidators[target.constructor.name]), (_a = {}, _a[propName] = ['required'], _a));
+}
+
+exports.Required = Required;
+
+function NotEmpty(target, propName) {
+  var _a;
+
+  registeredValidators[target.constructor.name] = __assign(__assign({}, registeredValidators[target.constructor.name]), (_a = {}, _a[propName] = ['notempty'], _a));
+}
+
+exports.NotEmpty = NotEmpty;
 
 function Logger(logString) {
   return function (constructor) {
@@ -276,9 +309,13 @@ function () {
     this.age = a ? this.age = a : 0;
   }
 
-  Person = __decorate([(0, decorators_1.Logger)("*******"), (0, decorators_1.UseHtmlTemplate)("<h1>LOG</h1>", "app"), (0, decorators_1.UseHtmlTemplate)("<h4>hhddddd</h4>", "log1")], Person);
+  __decorate([decorators_1.Required], Person.prototype, "name", void 0);
+
+  Person = __decorate([(0, decorators_1.Logger)("*******")], Person);
   return Person;
 }();
+
+var p = new Person('Heinz');
 
 var Product =
 /** @class */
