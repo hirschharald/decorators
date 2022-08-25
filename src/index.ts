@@ -3,8 +3,9 @@ import { Log, Log2, Log3, Logger, Required } from "./decorators";
 
 @Logger("*******")
 class Person {
-  @Required
+  
   name: string;
+  @Required
   age: number;
   constructor(n: string, a?: number) {
     this.name = n;

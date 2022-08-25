@@ -309,7 +309,7 @@ function () {
     this.age = a ? this.age = a : 0;
   }
 
-  __decorate([decorators_1.Required], Person.prototype, "name", void 0);
+  __decorate([decorators_1.Required], Person.prototype, "age", void 0);
 
   Person = __decorate([(0, decorators_1.Logger)("*******")], Person);
   return Person;
@@ -379,7 +379,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "42915" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "44309" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
