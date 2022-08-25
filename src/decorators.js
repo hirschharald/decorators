@@ -14,7 +14,7 @@ var __assign = (this && this.__assign) || function () {
     };
     return __assign.apply(this, arguments);
 };
-exports.__esModule = true;
+Object.defineProperty(exports, "__esModule", { value: true });
 exports.UseHtmlTemplate = exports.Log = exports.Log3 = exports.Log2 = exports.Logger = exports.NotEmpty = exports.Required = void 0;
 var registeredValidators = {};
 function Required(target, propName) {

@@ -346,7 +346,7 @@ function () {
   return Product;
 }();
 
-console.log("****", new Person());
+console.log("****", new Person('harry'));
 var pr = new Product(42, "test");
 pr.price = 50;
 var newP = pr.getPriceWithTax(0.2);
@@ -379,7 +379,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "44309" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "41029" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

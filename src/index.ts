@@ -23,7 +23,7 @@ class Product {
     this.title = t;
   }
   @Log2
-  set price(p) {
+  set price(p:number) {
     this._price = p;
   }
   @Log2
@@ -31,7 +31,7 @@ class Product {
     return this._price * (1 + tax);
   }
 }
-console.log("****", new Person());
+console.log("****", new Person('harry'));
 
 const pr = new Product(42, "test");
 pr.price = 50;

@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "strict": true,
+    "target": "es5",  // <-- here!
     "module": "commonjs",
     "jsx": "preserve",
     "esModuleInterop": true,
@@ -8,7 +9,7 @@
     "experimentalDecorators": true,
     "allowJs": true,
     "lib": [
-      "es6",
+      "es5",
       "dom"
     ],
     "rootDir": "src",

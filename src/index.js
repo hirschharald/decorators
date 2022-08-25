@@ -8,7 +8,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
-exports.__esModule = true;
+Object.defineProperty(exports, "__esModule", { value: true });
 require("./styles.css");
 var decorators_1 = require("./decorators");
 var Person = /** @class */ (function () {
@@ -18,7 +18,7 @@ var Person = /** @class */ (function () {
     }
     __decorate([
         decorators_1.Required
-    ], Person.prototype, "age");
+    ], Person.prototype, "age", void 0);
     Person = __decorate([
         (0, decorators_1.Logger)("*******")
     ], Person);
@@ -42,17 +42,17 @@ var Product = /** @class */ (function () {
     };
     __decorate([
         decorators_1.Log
-    ], Product.prototype, "title");
+    ], Product.prototype, "title", void 0);
     __decorate([
         decorators_1.Log2
-    ], Product.prototype, "price");
+    ], Product.prototype, "price", null);
     __decorate([
         decorators_1.Log2,
         __param(0, decorators_1.Log3)
-    ], Product.prototype, "getPriceWithTax");
+    ], Product.prototype, "getPriceWithTax", null);
     return Product;
 }());
-console.log("****", new Person());
+console.log("****", new Person('harry'));
 var pr = new Product(42, "test");
 pr.price = 50;
 var newP = pr.getPriceWithTax(0.2);
