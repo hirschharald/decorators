@@ -4,6 +4,10 @@ import { Log, Log2, Log3, Logger, UseHtmlTemplate } from "./decorators";
 @Logger("*******")
 @UseHtmlTemplate("<h1>LOG</h1>", "app")
 @UseHtmlTemplate("<h4>hhddddd</h4>", "log1")
+
+
+
+
 class Person {
   name: string;
   age: number;
