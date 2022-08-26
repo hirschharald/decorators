@@ -6,19 +6,4 @@
     "jsx": "preserve",
     "esModuleInterop": true,
     "sourceMap": true,
-    "experimentalDecorators": true,
-    "allowJs": true,
-    "lib": [
-      "es5",
-      "dom"
-    ],
-    "rootDir": "src",
-    "moduleResolution": "node" 
-  },
   
-
-    "include": ["src/**/*"],
-    "exclude": ["node_modules", "dist"]
-  
-  
-}

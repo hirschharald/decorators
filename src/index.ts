@@ -20,7 +20,7 @@ class Product {
   title: string;
   constructor(p: number, t: string) {
     this._price = p;
-    this.title = t;
+    this.title = t;   
   }
   @Log2
   set price(p:number) {

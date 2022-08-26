@@ -1,8 +1,4 @@
 "use strict";
-/*
-  decorators
-
-*/
 var __assign = (this && this.__assign) || function () {
     __assign = Object.assign || function(t) {
         for (var s, i = 1, n = arguments.length; i < n; i++) {
@@ -19,6 +15,7 @@ exports.UseHtmlTemplate = exports.Log = exports.Log3 = exports.Log2 = exports.Lo
 var registeredValidators = {};
 function Required(target, propName) {
     var _a;
+    console.log('#####', target.constructor.name);
     registeredValidators[target.constructor.name] = __assign(__assign({}, registeredValidators[target.constructor.name]), (_a = {}, _a[propName] = ['required'], _a));
 }
 exports.Required = Required;

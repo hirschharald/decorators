@@ -191,10 +191,6 @@ module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
 },{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/decorators.ts":[function(require,module,exports) {
 "use strict";
-/*
-  decorators
-
-*/
 
 var __assign = this && this.__assign || function () {
   __assign = Object.assign || function (t) {
@@ -221,6 +217,7 @@ var registeredValidators = {};
 function Required(target, propName) {
   var _a;
 
+  console.log('#####', target.constructor.name);
   registeredValidators[target.constructor.name] = __assign(__assign({}, registeredValidators[target.constructor.name]), (_a = {}, _a[propName] = ['required'], _a));
 }
 
@@ -379,7 +376,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "41029" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "42899" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

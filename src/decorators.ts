@@ -2,15 +2,15 @@
   decorators
 
 */
-
 interface ValidatorConfig {
   [property: string]: {
     [validatableProp: string]: string[]; // ['required', 'positive']
   };
 }
 const registeredValidators: ValidatorConfig = {};
-
 export function Required(target: any, propName: string) {
+  console.log('#####',target.constructor.name);
+  
   registeredValidators[target.constructor.name] = {
     ...registeredValidators[target.constructor.name],
     [propName]: ['required']
